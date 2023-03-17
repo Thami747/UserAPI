@@ -16,7 +16,18 @@ public class UserObjectMapper {
         return objectMapper.readValue(inputStream, typeReference);
     }
 
-    public static void saveNewClient(List<User> user) throws IOException {
-        objectMapper.writeValue(new File(filePath), user);
+    public static void saveNewClient(List<User> users) throws IOException {
+        objectMapper.writeValue(new File(filePath), users);
+    }
+
+    public static void deleteClient(User user) throws IOException {
+        List<User> userList = getClientsFromJson();
+        for (User deleteCustomUser : userList) {
+            if (deleteCustomUser.getIdNumber().equals(user.getIdNumber())) {
+                userList.remove(deleteCustomUser);
+                break;
+            }
+        }
+        objectMapper.writeValue(new File(filePath), userList);
     }
 }

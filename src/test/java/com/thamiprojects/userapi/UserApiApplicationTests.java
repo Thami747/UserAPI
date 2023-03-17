@@ -1,12 +1,15 @@
 package com.thamiprojects.userapi;
 
 import com.thamiprojects.userapi.model.User;
+import com.thamiprojects.userapi.utilities.UserObjectMapper;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.web.client.RestTemplate;
+
+import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -126,7 +129,7 @@ class UserApiApplicationTests {
 	}
 
 	@Test
-	public void testCreateClientSuccess() {
+	public void testCreateClientSuccess() throws IOException {
 		User user = new User();
 		user.setFirstName("Peter");
 		user.setLastName("Nkosi");
@@ -136,6 +139,7 @@ class UserApiApplicationTests {
 
 		User userResponse = restTemplate.postForObject(baseUrl+"/saveClient", user, User.class);
 		assertEquals("Successfully created Client.", userResponse.getMessage());
+		UserObjectMapper.deleteClient(user);
 	}
 
 	/**
