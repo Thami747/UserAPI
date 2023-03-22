@@ -2,8 +2,10 @@
 This is a Client Rest API that allows for creating, updating and searching for a client.
 
 # Technologies
-Spring Boot 3,
-Maven,
+Spring Boot 3
+
+Maven
+
 JUnit
 
 # Overview
