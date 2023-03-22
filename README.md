@@ -1,7 +1,7 @@
-# UserAPI
+# Spring Boot 3.0.2 Client Rest API
 This is a Client Rest API that allows for creating, updating and searching for a client.
 
-# Project Details
+# Technologies
 Spring Boot 3,
 Maven,
 JUnit
