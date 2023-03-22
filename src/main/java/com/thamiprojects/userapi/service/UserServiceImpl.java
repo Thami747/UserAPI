@@ -11,11 +11,6 @@ import java.util.List;
 //The below service implementation is commented out as we're not persisting to any database at this time
 @Service
 public class UserServiceImpl implements UserService {
-    private final UserRepository userRepository;
-
-    public UserServiceImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
     public void saveUser(List<User> user) throws IOException {
         UserObjectMapper.saveNewClient(user);
