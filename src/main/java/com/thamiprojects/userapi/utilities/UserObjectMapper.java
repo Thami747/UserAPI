@@ -9,7 +9,7 @@ import java.util.List;
 
 public class UserObjectMapper {
     private static final ObjectMapper objectMapper = new ObjectMapper();
-    private static final String filePath = "src/test/resources/clientList.json";
+    private static final String filePath = "UserAPI/src/main/resources/clientList.json";
     public static List<User> getClientsFromJson() throws IOException {
         InputStream inputStream = new FileInputStream(filePath);
         TypeReference<List<User>> typeReference = new TypeReference<>() {};

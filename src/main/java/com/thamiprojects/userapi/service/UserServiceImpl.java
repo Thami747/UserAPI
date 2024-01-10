@@ -28,4 +28,9 @@ public class UserServiceImpl implements UserService {
                 .findFirst()
                 .orElse(null);
     }
+
+  public List<User> getUsers() throws IOException {
+
+      return UserObjectMapper.getClientsFromJson();
+  }
 }
