@@ -20,8 +20,6 @@ public class UserObjectMapper {
         objectMapper.writeValue(new File(filePath), users);
     }
 
-
-
     public static void deleteClient(User user) throws IOException {
         List<User> userList = getClientsFromJson();
         for (User deleteCustomUser : userList) {
@@ -32,4 +30,6 @@ public class UserObjectMapper {
         }
         objectMapper.writeValue(new File(filePath), userList);
     }
+
+
 }
