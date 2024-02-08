@@ -12,5 +12,6 @@ public interface UserService {
     void updateUser(List<User> user) throws IOException;
 
     User getUser(String id) throws IOException;
+  List<User> getUsers() throws IOException;
 
 }

@@ -108,6 +108,19 @@ public class UserController {
         return userResponse;
     }
 
+  @CrossOrigin(origins = "http://localhost:4200")
+  @GetMapping(value="/getClients")
+  public List<User> getClients() throws IOException {
+    List<User> userResponse;
+    userResponse = userService.getUsers();
+    if(userResponse != null) {
+      userResponse.get(0).setMessage("Successfully found client.");
+    } else {
+      userResponse.get(0).setMessage("Client does not exist.");
+    }
+    return userResponse;
+  }
+
     private boolean isEmptyString(String s) {
         if (s != null && !s.isEmpty())
             return false;

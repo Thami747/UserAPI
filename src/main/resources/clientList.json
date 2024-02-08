@@ -4,8 +4,26 @@
     "firstName": "Thami",
     "lastName": "Nkosi",
     "mobileNumber": "0721612718",
-    "idNumber": "9222075335089",
+    "idNumber": "9222073343089",
     "address": "102 Grant Street, Lilyvale, Benoni, 1501",
+    "message": null
+  },
+  {
+    "id": 2,
+    "firstName": "Vusi",
+    "lastName": "Nkosi",
+    "mobileNumber": "0721612718",
+    "idNumber": "9222075443089",
+    "address": "102 Grant Street, Crystal, Benoni, 1501",
+    "message": null
+  },
+  {
+    "id": 3,
+    "firstName": "Malavo",
+    "lastName": "Nkosi",
+    "mobileNumber": "0721612718",
+    "idNumber": "9222075335089",
+    "address": "102 Grant Street, Daveyton, Benoni, 1501",
     "message": null
   }
 ]
